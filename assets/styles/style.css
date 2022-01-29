@@ -1,4 +1,14 @@
+/* -------------- Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
 /* -------------- Global Styles */
+
+*   { 
+    margin: 0; 
+    padding: 0;
+}
+
 
 body {
     background-color: rgb(1,59,56);
@@ -12,7 +22,9 @@ body {
 
 h1 {
     padding-top: 2%;
+    padding-bottom: 2%;
     text-align: center;
+    font-family: 'Lato', sans-serif;
 }
 
 /* -------------- Page content */
@@ -20,15 +32,12 @@ h1 {
 .site-content {
     background-color: white;
     box-sizing: border-box;
-    width: 60%;
-    height: 80%;
-    margin-top: 5%;
+    width: 85%;
+    height: 900px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 25px;
+    margin-top: 2%;
 }
-
-
 
 
 img {
@@ -36,4 +45,33 @@ img {
     margin-left: auto;
     margin-right: auto;
     border-radius: 25px;
+    width: 75%;
+    height: fit-content;
+}
+
+
+
+input {
+    border-radius: 5px;
+    border: 3px solid;
+}
+
+
+.submit {
+    background-color: greenyellow;
+}
+
+/* -------------- Text styles */
+
+.question {
+    font-family: 'Lato', sans-serif;
+    font-size: 28px;
+    text-align: center;
+}
+
+.score-section {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    text-align: right;
+    margin-right: 20%;
 }
