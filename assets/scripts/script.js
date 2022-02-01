@@ -80,7 +80,7 @@ let questions = [{
     {
         question: 'Which country is often called Land of Rising Sun?',
         alternatives: ['China', 'Japan', 'South Korea'],
-        answer: 2
+        answer: 1
     },
 
     {
