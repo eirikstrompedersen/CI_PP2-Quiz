@@ -3,7 +3,7 @@
 let questions = [{
         question: 'What is the smallest country in the world with an area of only 0.49 square kilometres?',
         alternatives: ['Monaco', 'Vatican', 'Andorra'],
-        answer: 2
+        answer: 1
     },
 
     {
@@ -14,8 +14,8 @@ let questions = [{
 
     {
         question: 'Which of the following is a landlocked country, meaning it is not bordered by the sea or ocean?',
-        alternatives: ['Madagaskar', 'Kazakhstan', 'Turkey'],
-        answer: 1
+        alternatives: ['Kazakhstan', 'Madagascar', 'Turkey'],
+        answer: 0
     },
 
     {
@@ -33,7 +33,7 @@ let questions = [{
     {
         question: 'Which European country is divided into administrative divisions called departments?',
         alternatives: ['France', 'Spain', 'Portugal'],
-        answer: 1
+        answer: 0
     },
 
     {
