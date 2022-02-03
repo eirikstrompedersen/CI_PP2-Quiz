@@ -12,10 +12,9 @@
 
 body {
     background-color: rgb(1,59,56);
-    /*background-image: url(/assets/images/background-image.jpg);*/
-    background-size: auto;
+    background-image: url(/assets/images/background-image3.jpg); /* Bilde av Filippo Peisino fra Pexels */
+    background-size: 100%;
     background-repeat: no-repeat;
-    
 }
 
 /* -------------- Heading */
@@ -32,29 +31,37 @@ h1 {
 .site-content {
     background-color: white;
     box-sizing: border-box;
-    width: 70%;
-    height: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%;
-}
-
-
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 60%;
+    height: 600px;
+    margin-left: 20%;
+    margin-top: 10%;
     border-radius: 25px;
-    width: 50%;
-    height: fit-content;
+    border: 3px solid black;
 }
 
-
-
-input {
-    border-radius: 5px;
-    border: 3px solid;
+.choice-area {
+    box-sizing: border-box;
+    text-align: center;
+    float:inline-end;
 }
+
+.alternative-box {
+    background-color: #fff ;
+    border: 3px solid black;
+    border-radius: 25px;
+    width: 250px;
+    height: 75px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 5%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding-top: 14px;
+    font-size: 32px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+}
+
 
 
 .submit {
@@ -65,8 +72,9 @@ input {
 
 .question {
     font-family: 'Lato', sans-serif;
-    font-size: 28px;
+    font-size: 32px;
     text-align: center;
+    font-weight: bolder;
 }
 
 .score-section {
