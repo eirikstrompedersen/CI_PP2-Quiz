@@ -20,8 +20,7 @@ body {
 /* -------------- Heading */
 
 h1 {
-    padding-top: 2%;
-    padding-bottom: 2%;
+    margin-top: 5%;
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-size: 3rem;
@@ -36,7 +35,7 @@ h1 {
     width: 60%;
     height: 670px;
     margin-left: 20%;
-    margin-top: 10%;
+    margin-top: 7%;
     border-radius: 25px;
     border: 3px solid black;
 }
@@ -53,8 +52,8 @@ h1 {
     font-family: 'Lato', sans-serif;
     font-size: 1.5rem;
     text-align: right;
-    margin-right: 22%;
     margin-top: 7%;
+    margin-right: 22%;
 }
 
 .choice-area {
@@ -86,9 +85,27 @@ h1 {
     background-color: greenyellow;
 }
 
+/* -------------- buttons */
+
+button {
+    width: 5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    margin-right: 22%;
+    margin-top: 2%;
+    float: right;
+    border: 2px solid black;
+}
+
+
 /* -------------- Actions */
 
 .alternative-box:hover {
+    background-color: limegreen;
+}
+
+button:hover {
     background-color: limegreen;
 }
 
