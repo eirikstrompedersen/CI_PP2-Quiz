@@ -1,6 +1,9 @@
 /*  https://www.welovequizzes.com/countries-of-the-world-quiz-questions-and-answers/ */
 
-let questions = [{
+
+/* List of questions */ 
+
+let questionList = [{
         question: 'What is the smallest country in the world with an area of only 0.49 square kilometres?',
         alternatives: ['Monaco', 'Vatican', 'Andorra'],
         answer: 1
@@ -227,4 +230,23 @@ let questions = [{
     }];3
 
 
-    
+    /* On next click */
+
+
+    next.onclick = function() {
+
+        if (if i > questionList.length -1) {
+            i=0;
+        } 
+        nextQuestion(i);
+        i++;
+    };
+
+
+
+    /* Question validation  */
+
+
+    /* Score counter */
+
+    /* */
