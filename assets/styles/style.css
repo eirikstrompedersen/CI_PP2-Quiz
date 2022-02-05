@@ -24,6 +24,8 @@ h1 {
     padding-bottom: 2%;
     text-align: center;
     font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+    font-weight: bolder;
 }
 
 /* -------------- Page content */
@@ -32,11 +34,27 @@ h1 {
     background-color: white;
     box-sizing: border-box;
     width: 60%;
-    height: 600px;
+    height: 670px;
     margin-left: 20%;
     margin-top: 10%;
     border-radius: 25px;
     border: 3px solid black;
+}
+
+.question {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 7%;
+}
+
+.score-counter {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    text-align: right;
+    margin-right: 22%;
+    margin-top: 7%;
 }
 
 .choice-area {
@@ -53,11 +71,11 @@ h1 {
     height: 75px;
     margin-left: 2%;
     margin-right: 2%;
-    margin-top: 5%;
+    margin-top: 7%;
     display: inline-block;
     box-sizing: border-box;
     padding-top: 14px;
-    font-size: 32px;
+    font-size: 2rem;
     font-family: 'Lato', sans-serif;
     font-weight: bolder;
 }
@@ -68,18 +86,12 @@ h1 {
     background-color: greenyellow;
 }
 
+/* -------------- Actions */
+
+.alternative-box:hover {
+    background-color: limegreen;
+}
+
+
 /* -------------- Text styles */
 
-.question {
-    font-family: 'Lato', sans-serif;
-    font-size: 32px;
-    text-align: center;
-    font-weight: bolder;
-}
-
-.score-section {
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    text-align: right;
-    margin-right: 20%;
-}
