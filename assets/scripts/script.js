@@ -230,8 +230,97 @@ let questionList = [{
     }];3
 
 
-    /* On next click */
+    /* Start quiz */
+    
 
+function launchQuiz() {
+    let quizArea = document.getElementById('game-area');
+    quizArea.innerHTML = `
+
+
+        <div class="question">
+        #question text
+        </div>
+
+        <div class="alternative-1 alternative-box">
+            #alt1     
+        </div>
+
+        <div class="alternative-2 alternative-box">
+            #alt2
+        </div>
+
+        <div class="alternative-3 alternative-box">
+            #alt3
+        </div>
+
+        <button onclick="nextQuestuon();" id="next">Next</button>
+
+        <div class="score-counter">
+            Score
+            1 / 25
+        </div>
+    `
+}
+
+
+
+
+
+
+/*
+
+    let quizContent = document.getElementsByClassName('site-content');
+
+
+    function launchQuiz() {
+    // Create div to hold gameArea
+    // let quizAreaDiv = document.createElement('div');
+    
+    let html = quizContent.innerHTML;
+    console.log(html);
+
+
+
+    quizAreaDiv.innerHTML = `
+    <div class="choice-area">
+            <div class="question">
+                Which capital in Europa is highest above the sea?
+            </div>
+            
+                <div class="alternative-1 alternative-box">
+                    Rome       
+                </div>
+
+                <div class="alternative-2 alternative-box">
+                    Paris
+                </div>
+
+                <div class="alternative-3 alternative-box">
+                    Madrid
+                </div>
+
+                <button onclick="nextQuestuon();" id="next">Next</button>
+            
+            <div class="score-counter">
+
+                Score
+                1 / 25
+            </div>
+
+            </div>
+    `;
+
+};
+
+/*
+let firstQuestion = document.getElementsByClassName('gameArea')[0];
+document.body.insertBefore(quizAreaDiv, firstQuestion);
+};
+
+
+    /* On next click */
+/*
 
     next.onclick = function() {
 
@@ -241,7 +330,7 @@ let questionList = [{
         nextQuestion(i);
         i++;
     };
-
+*/ 
 
 
     /* Question validation  */
