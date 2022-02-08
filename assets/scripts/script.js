@@ -246,21 +246,19 @@ function startQuiz() {
     let quizArea = document.getElementById('game-area')
     quizArea.innerHTML = `
         <div class="question">
-        #question text
         </div>
 
         <button id="alt1" class="alt1 alt-box aria-label="Alternative 1">
-            #alt1     
+            placment text
         </button>
-
+        
         <button id="alt2" class="alt2 alt-box aria-label="Alternative 2">
-            #alt2
+            placment text
         </button>
-
+        
         <button id="alt3" class="alt3 alt-box aria-label="Alternative 3">
-            #alt3
+            placment text
         </button>
-
         <button onclick="nextQuestion();" id="next">Next</button>
 
         <div class="score-counter">
@@ -268,13 +266,14 @@ function startQuiz() {
             1 / 25
         </div>
 `;
+}
 
 /**
  * pull questions from array and display them in the quizArea
  */
 
 
-
+/*
     for (let question of questionList) {
         quizArea.InnerHTML = `
         <div>${question[0]}</div>

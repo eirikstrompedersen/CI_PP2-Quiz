@@ -109,7 +109,8 @@ button {
 
 
 button:hover {
-    background-color: limegreen;
+    background-color: black;
+    color: white;
 }
 
 .start-button:hover {
