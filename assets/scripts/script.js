@@ -1,5 +1,6 @@
 /*  https://www.welovequizzes.com/countries-of-the-world-quiz-questions-and-answers/ */
 
+console.log('works');
 
 /* List of questions */
 
@@ -230,34 +231,82 @@ let questionList = [{
 }];
 
 
-/* Start quiz */
+console.log(questionList.length);
 
+
+/* Start quiz */
 
 /**
  * Start quiz when user hit start
  * Alter HTML to launch question and alternatives
 */
-function launchQuiz() {
-    let quizArea = document.getElementById('game-area');
-    quizArea.innerHTML = `
 
+
+function startQuiz() {
+    let quizArea = document.getElementById('game-area')
+    quizArea.innerHTML = `
+        <div class="question">
+        #question text
+        </div>
+
+        <button id="alt1" class="alt1 alt-box aria-label="Alternative 1">
+            #alt1     
+        </button>
+
+        <button id="alt2" class="alt2 alt-box aria-label="Alternative 2">
+            #alt2
+        </button>
+
+        <button id="alt3" class="alt3 alt-box aria-label="Alternative 3">
+            #alt3
+        </button>
+
+        <button onclick="nextQuestion();" id="next">Next</button>
+
+        <div class="score-counter">
+            Score
+            1 / 25
+        </div>
+`;
+
+/**
+ * pull questions from array and display them in the quizArea
+ */
+
+
+
+    for (let question of questionList) {
+        quizArea.InnerHTML = `
+        <div>${question[0]}</div>
+        <button>${questionList.alternatives[0]}</button>
+        <button>${questionList.alternatives[1]}</button>
+        <button>${questionList.alternatives[2]}</button>
+    
+        `
+    
+    }
+
+}
+
+    /*
+    
             <div class="question">
             #question text
             </div>
 
-            <button class="alt1 alt-box aria-label="Alternative 1">
+            <button id="alt1" class="alt1 alt-box aria-label="Alternative 1">
                 #alt1     
             </button>
 
-            <button class="alt2 alt-box aria-label="Alternative 2"">
+            <button id="alt2" class="alt2 alt-box aria-label="Alternative 2">
                 #alt2
             </button>
 
-            <button class="alt3 alt-box aria-label="Alternative 3"">
+            <button id="alt3" class="alt3 alt-box aria-label="Alternative 3">
                 #alt3
             </button>
 
-            <button onclick="nextQuestuon();" id="next">Next</button>
+            <button onclick="nextQuestion();" id="next">Next</button>
 
             <div class="score-counter">
                 Score
@@ -265,10 +314,17 @@ function launchQuiz() {
             </div>
         `
 }
-/*
-function nextQuestion () {
+
+// function nextQuestion () {
+
+for (let question of questionList) {
+    quizArea.InnerHTML = `
+    <button>${questionList.alternatives[1]}</button>
 
 
-    
+
+
+    `
+
 }
 */
