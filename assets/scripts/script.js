@@ -250,7 +250,7 @@ console.log(firstQuestion);
 
 
 function startQuiz() {
-    let quizArea = document.getElementById('game-area')
+    var quizArea = document.getElementById('game-area')
     quizArea.innerHTML = `
 
         <div class="question">${questionList[0].questionText}</div>
@@ -274,10 +274,22 @@ function startQuiz() {
             Score
             1 / 25
         </div>
-
         
-`;}
+        
+`;
+}
 
+/**
+ * Get next question from array
+ */
+
+function nextQuestion() {
+    for (var i = 0; i < questionList; i++);
+    console.log(questionList[i]); 
+}
+
+
+/*
 function insertQuestion() {
     let question = document.getElementById("question")
     question.innerHTML = "";
@@ -287,22 +299,5 @@ function insertQuestion() {
     }
         )
     question.innerHTML += div;
-}
-
-
-
-/**
- * pull questions from array and display them in the quizArea
- */
-
-
-
-/*
-// function nextQuestion () {
-
-for (let question of questionList) {
-    quizArea.InnerHTML = `
-    <button>${questionList.alternatives[1]}</button>
-
 }
 */
