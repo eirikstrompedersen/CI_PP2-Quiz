@@ -11,16 +11,13 @@
 
 
 body {
-    background-color: rgb(1,59,56);
-    background-image: url(/assets/images/background-image3.jpg); /* Bilde av Filippo Peisino fra Pexels */
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-color: rgb(192, 192, 192);
 }
 
 /* -------------- Heading */
 
 h1 {
-    margin-top: 5%;
+    margin-top: 7%;
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-size: 3rem;
@@ -29,46 +26,47 @@ h1 {
 
 /* -------------- Page content */
 
-.site-content {
-    background-color: white;
-    box-sizing: border-box;
-    width: 60%;
-    height: 670px;
-    margin-left: 20%;
-    margin-top: 7%;
-    border-radius: 25px;
-    border: 3px solid black;
-}
-
 .question {
     font-family: 'Lato', sans-serif;
     font-size: 2rem;
     text-align: center;
     font-weight: bolder;
-    margin-top: 150px;
-}
-
-.score-counter {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.5rem;
-    text-align: right;
     margin-top: 7%;
-    margin-right: 22%;
 }
 
-.alt-box {
-    background-color: #fff ;
+.footer {
+    margin-top: 7%;
+    float: left;
+    margin-left: 40%;
+}
+
+/* -------------- buttons */
+
+.alt-button {
+    background-color: #fff;
+    display: block;
     border: 3px solid black;
     border-radius: 25px;
     width: 250px;
     height: 75px;
-    margin-left: 6%;
-    margin-top: 100px;
-    display: inline-block;
-    box-sizing: border-box;
     font-size: 2rem;
     font-family: 'Lato', sans-serif;
     font-weight: bolder;
+    margin-top: 5%;
+    margin-left: 30%;
+}
+
+.next-button  {
+    background-color: #fff ;
+    border: 3px solid black;
+    border-radius: 25px;
+    width: 175px;
+    height: 37.5px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+    margin-top: 5%;
 }
 
 .start-button {
@@ -78,7 +76,7 @@ h1 {
     border-radius: 25px;
     width: 250px;
     height: 75px;
-    margin-left: 40%;
+    margin-left: 30%;
     margin-top: 170px;
     font-size: 2rem;
     font-family: 'Lato', sans-serif;
@@ -86,27 +84,7 @@ h1 {
     text-align: center;
 }
 
-
-.submit {
-    background-color: greenyellow;
-}
-
-/* -------------- buttons */
-
-button {
-    width: 5rem;
-    height: 2.5rem;
-    font-size: 1.5rem;
-    font-family: 'Lato', sans-serif;
-    margin-right: 22%;
-    margin-top: 2%;
-    float: right;
-    border: 2px solid black;
-}
-
-
 /* -------------- Actions */
-
 
 button:hover {
     background-color: black;
@@ -118,6 +96,10 @@ button:hover {
     color: #fff;
 }
 
-
 /* -------------- Text styles */
-
+.score-counter {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+}

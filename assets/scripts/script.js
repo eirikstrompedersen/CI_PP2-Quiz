@@ -1,8 +1,8 @@
 /*  https://www.welovequizzes.com/countries-of-the-world-quiz-questions-and-answers/ */
 
-console.log('works');
-
-/* List of questions */
+/**
+ * List of questions
+ */
 
 let questionList = [{
     questionText: 'What is the smallest country in the world with an area of only 0.49 square kilometres?',
@@ -78,7 +78,7 @@ let questionList = [{
 {
     questionText: 'Which country has the most islands in the world with more than 221,800?',
     alternatives: ['Canada', 'Norway', 'Sweden'],
-    Correctanswer: 2
+    answer: 2
 },
 
 {
@@ -231,73 +231,97 @@ let questionList = [{
 }];
 
 
-console.log(questionList.length);
-
-
-
-/* Start quiz */
-
 /**
  * Start quiz when user hit start
  * Alter HTML to launch question and alternatives
 */
 
-
-let firstQuestion = questionList[0].questionText;
-console.log(firstQuestion);
-
-
-
-
-function startQuiz() {
+function startQuiz() { // event listener for start button
     var quizArea = document.getElementById('game-area')
+    
     quizArea.innerHTML = `
-
         <div class="question">${questionList[0].questionText}</div>
 
-        <button id="alt1" class="alt1 alt-box aria-label="Alternative 1">
+        <button onclick="alt1();" id="alt1" class="alt1 alt-button aria-label="Alternative 1">
         ${questionList[0].alternatives[0]}
         </button>
         
-        <button id="alt2" class="alt2 alt-box aria-label="Alternative 2">
+        <button onclick="alt2();" id="alt2" class="alt2 alt-button aria-label="Alternative 2">
         ${questionList[0].alternatives[1]}
         </button>
 
-        <button id="alt3" class="alt3 alt-box aria-label="Alternative 3">
+        <button onclick="alt3();" id="alt3" class="alt3 alt-button aria-label="Alternative 3">
             ${questionList[0].alternatives[2]}
         </button>
-        <button onclick="nextQuestion();" id="next">Next</button>
 
 
+        <div class="footer">
+            <div class="score-counter">
+                Score
+                1 / 25
+            </div>
+            
+            <button onclick="nextQuestion();" class="next-button">Next</button>
 
-        <div class="score-counter">
-            Score
-            1 / 25
-        </div>
-        
-        
-`;
-}
+            
+        </div>       
+    `;
+    }
+
 
 /**
- * Get next question from array
- */
+* Pull next question from array
+*/  
+
+let arrayLength = questionList.length;
 
 function nextQuestion() {
-    for (var i = 0; i < questionList; i++);
-    console.log(questionList[i]); 
+    for (var i = 0; i < arrayLength; i++) {
+    console.log(questionList[i].questionText); // Control output 
+    }
 }
+
+
+
+
+/**
+ * Correct answer validator
+ */
 
 
 /*
-function insertQuestion() {
-    let question = document.getElementById("question")
-    question.innerHTML = "";
-    let div = "";
-    questionList.forEach(x => {
-        div += '<div>' + x.questionText+ '</div>'
-    }
-        )
-    question.innerHTML += div;
+let correctAnswer = questionList[0].answer
+
+function answerValidator() {
+    if questionList.alternatives[0] === questionList.answer
+} else {
+    questionList.alternatives[1] === questionList.answer
+} else {
+    questionList.alternatives[2] === questionList.answer
+}
+    
+*/
+
+
+
+/*
+function alt1() {
+console.log("test 1");
+}
+function alt2() {
+console.log("test 2");
+}
+function alt3() {
+    console.log("test 3");
+
 }
 */
+
+
+ /**
+  * Score board 
+  */
+
+
+
+
