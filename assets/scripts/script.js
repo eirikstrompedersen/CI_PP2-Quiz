@@ -1,5 +1,8 @@
 /*  https://www.welovequizzes.com/countries-of-the-world-quiz-questions-and-answers/ */
 
+let currentQuestion = 0;
+let currentScore = 0;
+
 /**
  * List of questions
  */
@@ -238,16 +241,18 @@ let questionList = [{
 
 
 var quizArea = document.getElementById('game-area');
-var question = document.getElementById('question');
+var question = document.getElementById('questionDiv');
 var alternative1 = document.getElementById('alt1');
 var alternative2 = document.getElementById('alt2');
 var alternative3 = document.getElementById('alt3');
-var currentIndex = -1;
+
 
 function startQuiz() { // event listener for start button
     
     quizArea.innerHTML = `
-        <div onload="loaded()"; id="questionDiv">${questionList[0].questionText}</div>
+        <div onload="loaded()"; id="questionDiv">
+        ${questionList[0].questionText}
+        </div>
 
         <button onclick="alt1();" id="alt1" class="alt1 alt-button" aria-label="Alternative 1">
         ${questionList[0].alternatives[0]}
@@ -272,12 +277,26 @@ function startQuiz() { // event listener for start button
     `;
 }
 
+function nextQuestion() {
+    currentQuestion = 1;
+    question.innerHTML = questionList[currentQuestion].questionText;
+
+}
+
 /**
 * Pull next question from array
 */  
-
+/*
 function nextQuestion() { // event listener for the next button
-    questionDiv = questionList[1].questionText;
+    let question = document.getElementById('questionDiv');
+    let arrayLength = questionList.length;
+
+    for (let i = 0; i < arrayLength; i++) {
+        arrayLength.questionText;
+        
+    }
+    question.innerText = questionList[0].questionText;
+
 }
 
 
