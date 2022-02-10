@@ -247,15 +247,18 @@ var currentIndex = -1;
 function startQuiz() { // event listener for start button
     
     quizArea.innerHTML = `
-        <div onload="loaded()"; id="question"></div>
+        <div onload="loaded()"; id="questionDiv">${questionList[0].questionText}</div>
 
         <button onclick="alt1();" id="alt1" class="alt1 alt-button" aria-label="Alternative 1">
+        ${questionList[0].alternatives[0]}
         </button>
         
         <button onclick="alt2();" id="alt2" class="alt2 alt-button" aria-label="Alternativ 2">
+        ${questionList[0].alternatives[1]}
         </button>
 
         <button onclick="alt3();" id="alt3" class="alt3 alt-button" aria-label="Alternative 3">
+        ${questionList[0].alternatives[2]}
         </button>
 
 
@@ -269,22 +272,12 @@ function startQuiz() { // event listener for start button
     `;
 }
 
-    question.innerText = questionList[0].questionText;
-
-
-
 /**
 * Pull next question from array
 */  
 
-function nextQuestion() {
-    // console.log(questionList[0].questionText);
-    let i = 1;
-    let incrementQuestion = questionList[+i]; // add +1 to the index to move to next question <--- not working...
-    console.log(incrementQuestion.questionText);
-
-    document.getElementById('question');
-
+function nextQuestion() { // event listener for the next button
+    questionDiv = questionList[1].questionText;
 }
 
 
