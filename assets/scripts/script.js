@@ -236,52 +236,73 @@ let questionList = [{
  * Alter HTML to launch question and alternatives
 */
 
+
+var quizArea = document.getElementById('game-area');
+var question = document.getElementById('question');
+var alternative1 = document.getElementById('alt1');
+var alternative2 = document.getElementById('alt2');
+var alternative3 = document.getElementById('alt3');
+var currentIndex = -1;
+
 function startQuiz() { // event listener for start button
-    var quizArea = document.getElementById('game-area')
     
     quizArea.innerHTML = `
-        <div class="question">${questionList[0].questionText}</div>
+        <div onload="loaded()"; id="question"></div>
 
-        <button onclick="alt1();" id="alt1" class="alt1 alt-button aria-label="Alternative 1">
-        ${questionList[0].alternatives[0]}
+        <button onclick="alt1();" id="alt1" class="alt1 alt-button" aria-label="Alternative 1">
         </button>
         
-        <button onclick="alt2();" id="alt2" class="alt2 alt-button aria-label="Alternative 2">
-        ${questionList[0].alternatives[1]}
+        <button onclick="alt2();" id="alt2" class="alt2 alt-button" aria-label="Alternativ 2">
         </button>
 
-        <button onclick="alt3();" id="alt3" class="alt3 alt-button aria-label="Alternative 3">
-            ${questionList[0].alternatives[2]}
+        <button onclick="alt3();" id="alt3" class="alt3 alt-button" aria-label="Alternative 3">
         </button>
 
 
         <div class="footer">
             <div class="score-counter">
-                Score
-                1 / 25
             </div>
             
             <button onclick="nextQuestion();" class="next-button">Next</button>
-
             
-        </div>       
+        </div>         
     `;
-    }
+}
+
+    question.innerText = questionList[0].questionText;
+
 
 
 /**
 * Pull next question from array
 */  
 
-let arrayLength = questionList.length;
-
 function nextQuestion() {
-    for (var i = 0; i < arrayLength; i++) {
-    console.log(questionList[i].questionText); // Control output 
-    }
+    // console.log(questionList[0].questionText);
+    let i = 1;
+    let incrementQuestion = questionList[+i]; // add +1 to the index to move to next question <--- not working...
+    console.log(incrementQuestion.questionText);
+
+    document.getElementById('question');
+
 }
 
 
+/**
+* Pull next question from array
+*/  
+
+/*
+let arrayLength = questionList.length;
+
+function nextQuestion() {
+    for (i = 0; i < arrayLength; i++) {
+        questionList[i].questionText;
+
+    console.log(arrayLength); // Control output    
+    }
+}
+*/
 
 
 /**
