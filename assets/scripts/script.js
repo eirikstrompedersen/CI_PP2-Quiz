@@ -1,8 +1,9 @@
 /*  https://www.welovequizzes.com/countries-of-the-world-quiz-questions-and-answers/ */
 
+/*
 let currentQuestion = 0;
 let currentScore = 0;
-
+*/
 /**
  * List of questions
  */
@@ -277,12 +278,13 @@ function startQuiz() { // event listener for start button
     `;
 }
 
+/*
 function nextQuestion() {
     currentQuestion = 1;
     question.innerHTML = questionList[currentQuestion].questionText;
 
 }
-
+*/
 /**
 * Pull next question from array
 */  
